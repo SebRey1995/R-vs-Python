@@ -1,0 +1,30 @@
+---
+title: "Import data from Github and explore it"
+output:
+  pdf_document: default
+  html_notebook: default
+---
+
+***Create the dataframe***
+```{r}
+x <- "~/Insync/rerosa@ier.unam.mx/Google Drive/R/R-vs-Python/Etapa_1/temixco.csv"
+
+data_temixco <- read.csv(x)
+head(data_temixco, n=10)
+```
+
+
+***Summary of the data***
+```{r}
+summary(data_temixco)
+```
+
+
+
+
+
+
+
+
+
+
