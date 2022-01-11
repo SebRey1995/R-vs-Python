@@ -37,7 +37,7 @@ df_reshaped <- data.frame(x = df$x,
 
 
 
-
+a <- c(a, s, f, )
 
 
 
