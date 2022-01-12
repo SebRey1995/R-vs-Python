@@ -20,24 +20,10 @@ summary(data_temixco)
 ```
 
 
-set.seed(200)                                            
-df <- data.frame(x = 1:10,
-                   y1 = rnorm(5),
-                   y2 = runif(5),
-                   y3 = rpois(5, 1))
- 
-# Reshape data frame
-df_reshaped <- data.frame(x = df$x,                           
-                       y = c(df$y1, df$y2, df$y3),
-                       group = c(rep("y1", nrow(df)),
-                                 rep("y2", nrow(df)),
-                                 rep("y3", nrow(df))))
+
  
 
 
-
-
-a <- c(a, s, f, )
 
 
 
