@@ -1,7 +1,6 @@
 ---
 title: "Import data from Github and explore it"
 output:
-  pdf_document: default
   html_notebook: default
 ---
 
@@ -9,7 +8,7 @@ output:
 ```{r}
 path <- "../data/temixco.csv"
 
-data_temixco <- read.csv(path)
+data_temixco <- readr::read_csv(path)
 head(data_temixco, n=6)
 ```
 
@@ -19,6 +18,10 @@ head(data_temixco, n=6)
 summary(data_temixco)
 ```
 
+## Pre-visualizing the data:
+```{r}
+skimr::skim(data_temixco)
+```
 
 
  
