@@ -35,8 +35,6 @@ ggplot(data = data_temixco, mapping = aes(x = time, y = To)) + geom_line()
 ggplot(data = data_temixco, mapping = aes(x = time, y = WS)) + geom_line()
 ```
 
-s
-
 
 
 
