@@ -43,6 +43,10 @@ ggplot(data = data_temixco, mapping = aes(x = time, y = WS)) + geom_line()
 ```
 
 
+```{r}
+plot.ts(data_temixco)
+```
+
 
 
 
