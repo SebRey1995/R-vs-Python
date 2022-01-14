@@ -9,7 +9,6 @@ output:
 ***Create the dataframe***
 ```{r}
 path <- "../data/temixco.csv"
-
 data_temixco <- readr::read_csv(path)
 head(data_temixco, n=6)
 ```
@@ -31,8 +30,10 @@ skimr::skim(data_temixco)
 library(ggplot2)
 ggplot(data = data_temixco, mapping = aes(x = time, y = To)) + geom_line()
 ```
-s
 
+```{r}
+ggplot(data = data_temixco, mapping = aes(x = time, y = WS)) + geom_line()
+```
 
 
 
