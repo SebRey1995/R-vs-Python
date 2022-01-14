@@ -1,9 +1,9 @@
 ---
 title: "Import data from Github and explore it"
 output:
-  html_notebook: default
   html_document:
     df_print: paged
+  html_notebook: default
 ---
 
 ***Create the dataframe***
@@ -31,7 +31,7 @@ skimr::skim(data_temixco)
 library(ggplot2)
 ggplot(data = data_temixco, mapping = aes(x = time, y = To)) + geom_line()
 ```
-
+s
 
 
 
