@@ -11,6 +11,7 @@ output:
 library(readr) # Read/write data files
 library(ggplot2)  # For all the badass plots
 library(skimr)  # For best data summarize
+library(TSstudio)
 ```
 
 
@@ -35,17 +36,9 @@ skim(data_temixco)
 
 ## Plotting one variable
 ```{r}
-ggplot(data = data_temixco, mapping = aes(x = time, y = To)) + geom_line()
+ts_plot(data_temixco[c("time", "Ib", "Ig", "To", "RH")], type = "multiple", title = "Datos Temixco")
 ```
 
-```{r}
-ggplot(data = data_temixco, mapping = aes(x = time, y = WS)) + geom_line()
-```
-
-
-```{r}
-plot.ts(data_temixco)
-```
 
 
 
