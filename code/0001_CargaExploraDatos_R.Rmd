@@ -1,16 +1,24 @@
 ---
 title: "Import data from Github and explore it"
 output:
+  html_notebook: default
   html_document:
     df_print: paged
-  html_notebook: default
 ---
+
+## Libraries
+```{r}
+library(readr) # Read/write data files
+library(ggplot2)  # For all the badass plots
+library(skimr)  # For best data summarize
+```
+
 
 ***Create the dataframe***
 ```{r}
 path <- "../data/temixco.csv"
-data_temixco <- readr::read_csv(path)
-head(data_temixco, n=6)
+data_temixco <- read_csv(path)
+data_temixco
 ```
 
 
@@ -21,13 +29,12 @@ summary(data_temixco)
 
 ## Pre-visualizing the data:
 ```{r}
-skimr::skim(data_temixco)
+skim(data_temixco)
 ```
 
 
 ## Plotting one variable
 ```{r}
-library(ggplot2)
 ggplot(data = data_temixco, mapping = aes(x = time, y = To)) + geom_line()
 ```
 
