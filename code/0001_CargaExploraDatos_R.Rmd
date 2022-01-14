@@ -2,6 +2,8 @@
 title: "Import data from Github and explore it"
 output:
   html_notebook: default
+  html_document:
+    df_print: paged
 ---
 
 ***Create the dataframe***
