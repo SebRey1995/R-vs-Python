@@ -26,10 +26,11 @@ skimr::skim(data_temixco)
 ```
 
 
- 
-Next task:
-
-
+## Plotting one variable
+```{r}
+library(ggplot2)
+ggplot(data = data_temixco, mapping = aes(x = time, y = To)) + geom_line()
+```
 
 
 
