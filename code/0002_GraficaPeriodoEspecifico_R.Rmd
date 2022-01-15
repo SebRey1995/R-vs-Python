@@ -1,0 +1,69 @@
+---
+title: "Graficar periodo específico"
+output: html_notebook
+---
+
+## Libraries
+```{r}
+library(readr)
+library(ggplot2)
+library(skimr)
+library(dplyr)
+library(lubridate)
+library(openair)
+```
+
+### Primero se lee el archivo
+```{r}
+data_temixco <- read_csv("../data/temixco.csv")
+data_temixco
+```
+
+
+## Luego se grafíca por periodo de tiempo
+```{r}
+ts_plot(selectByDate(data_temixco, 
+                     start = "2018-01-01", 
+                     end = "2018-02-01"), 
+        type = "multiple", 
+        title = "Datos Temixco")
+```
+
+
+### Sólo los fines de semana de ciertos meses durante algunas horas
+```{r}
+ts_plot(selectByDate(data_temixco, day = "weekend", hour = 7:17, month =
+c("jan", "feb", "mar")), 
+type = "multiple", 
+title = "Intervalo por fin de semana")
+```
+
+
+### Sólo entre semana de ciertos meses durante algunas horas
+```{r}
+ts_plot(selectByDate(data_temixco, day = "weekday", hour = 7:17, month =
+c("jan", "feb", "mar")), 
+type = "multiple", 
+title = "Intervalo por fin de semana")
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
