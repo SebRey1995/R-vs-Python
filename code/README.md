@@ -11,6 +11,6 @@
    * Cargar el archivo "temixco.csv" y explorarlo ráṕidamente
 ### Reto 2
    * Graficar periodo de tiempo específico
-### Reto 3: Multi-indexar un data frame:
+### Reto 3:
    * Resample de los datos "temixco.csv" con una frecuencia mensual y graficar ese resample.
 
