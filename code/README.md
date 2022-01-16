@@ -12,8 +12,5 @@
 ### Reto 2
    * Graficar periodo de tiempo específico
 ### Reto 3: Multi-indexar un data frame:
-   * Cambiar el índice de la serie de tiempo del archivo "temixco.csv".
-   * Indexar dos variables en lugar de la serie de tiempo. Variables a indexar: Ib y WH
-#### Objetivo:
-   * Analizar la facilidad de realizar un multi índice en Python y en R
+   * Resample de los datos "temixco.csv" con una frecuencia mensual y graficar ese resample.
 
