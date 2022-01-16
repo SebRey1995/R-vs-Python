@@ -4,4 +4,8 @@
 
 ## Retos
 ### Reto 3: Multi-indexar un data frame:
-Crear un índice de al menos dos variables para el data frame con los datos "temixco.csv"
+* Cambiar el índice de la serie de tiempo del archivo "temixco.csv".
+* Indexar dos variables en lugar de la serie de tiempo. Variables a indexar: Ib y WH
+#### Objetivo:
+* Analizar la facilidad de realizar un multi índice en Python y en R
+
