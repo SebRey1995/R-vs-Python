@@ -1,0 +1,51 @@
+---
+title: "Función resample() mensualmente y graficarlos"
+output: html_notebook
+---
+## Librerías a utilizar
+```{r}
+library(readr)
+library(ggplot2)
+library(skimr)
+library(dplyr)
+library(lubridate)
+library(openair)
+```
+
+## Cargar los datos de "temixco.csv"
+```{r}
+data_temixco <-read_csv("../data/temixco.csv")
+data_temixco
+```
+
+
+## Probando la función homóloga a "resample()"
+* Se usará la función *date_group* dentro de la librería *clock*.
+* Esta funció agrupa los objetos de tiempo en periodos con precisión desde segundos hasta años
+* $n$ indica el número de veces de la frecuencia.
+```{r}
+month_data <- data_temixco %>%
+  mutate(
+    month = date_group(data_temixco$time, "month", n = 1)
+  ) %>% 
+  group_by(month) %>% 
+  summarize(across(colnames(data_temixco), mean)) %>% 
+  select(everything(), -time)
+month_data
+```
+
+
+## Graficar el df anterior como una serie de tiempo:
+```{r}
+library(TSstudio)
+ts_plot(month_data,
+        type = "multiple",
+        title = "Promedio mensual")
+```
+
+
+
+
+
+
+
