@@ -15,3 +15,6 @@
 ### Reto 3:
    * Resample de los datos "temixco.csv" con una frecuencia mensual y graficar ese resample.
 
+### Reto 4:
+   * Realizar un shift de tiempo a los datos por 5 días adelante
+
