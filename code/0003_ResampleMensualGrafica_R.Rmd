@@ -48,4 +48,3 @@ ts_plot(month_data,
 
 
 
-
